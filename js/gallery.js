@@ -17,6 +17,11 @@ const imagenes =
         {url:'img/4_585d63.png', title: 'Ship', size: 15, desc: 'Voluptas tempore commodi modi, atque assumenda nemo. Blanditiis eaque suscipit ad.'}
     ];
 
+const loadImages = () => {
+    imagenes.forEach( element => {
+        new Image().src = element.url;
+    } );
+}
 
 const changePic = e => {
     // Si hay elementos transicionando (mas de una imagen en el contenedor), ignoro el click
@@ -58,11 +63,13 @@ const iniciarGaleria = () => {
 
 const hideLoading = () => {
     const state = document.readyState;
+    console.log(state);
     if (state == 'complete') {
             document.querySelector('.loading').style.display="none";
     }
 }
 
 document.onreadystatechange = hideLoading;
+loadImages();
 iniciarGaleria();
 btnImg.addEventListener('click', changePic);
