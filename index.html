@@ -6,10 +6,7 @@
     <title>Ron Lawson | Dynamic Gallery</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/gallery.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     
@@ -22,20 +19,25 @@
     <div id="wrapper">
   
         <div id="frame">
+            <div class="loading fa-5x">
+                <i class="fas fa-circle-notch fa-spin"></i>
+            </div>
             <div id="content">
                 <!-- Acá van las imágenes -->
             </div>
+
         </div>
 
         <div id="data">
-            <h2 id="title">Empty</h2>
+            <h2 id="title">Loading...</h2>
             <p id="measures">00cm x 00cm</p>
-            <p id="description">Description placeholder.</p>
+            <p id="description">Loading...</p>
             <button id="btn-next" class="btn">Next ></button>
         </div>
 
     </div>
 
+    <script src="https://kit.fontawesome.com/fafb81db9e.js" crossorigin="anonymous"></script>
     <script src="js/gallery.js"></script>
 </body>
 </html>

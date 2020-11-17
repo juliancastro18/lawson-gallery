@@ -56,5 +56,13 @@ const iniciarGaleria = () => {
     description.textContent = imagenes[0].desc;
 }
 
+const hideLoading = () => {
+    const state = document.readyState;
+    if (state == 'complete') {
+            document.querySelector('.loading').style.display="none";
+    }
+}
+
+document.onreadystatechange = hideLoading;
 iniciarGaleria();
 btnImg.addEventListener('click', changePic);

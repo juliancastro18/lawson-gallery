@@ -2,6 +2,7 @@ const elem = document.querySelector('#content');
 const body = document.querySelector('body');
 const btnImg = document.querySelector('#btn-img');
 
+document.onreadystatechange = hideLoading;
 body.addEventListener("mousemove", parallax);
 btnImg.addEventListener("click", imgResize);
 
@@ -25,5 +26,12 @@ function imgResize(e) {
         btnImg.textContent = "Crop to fit";
     } else {
         btnImg.textContent = "Show full painting";
+    }
+}
+
+function hideLoading() {
+    const state = document.readyState;
+    if (state == 'complete') {
+            document.querySelector('.loading').style.display="none";
     }
 }
