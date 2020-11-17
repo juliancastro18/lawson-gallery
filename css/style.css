@@ -80,7 +80,7 @@ body {
 /* ------------- NAV ------------- */
 
 nav {
-    user-select: none;
+    -webkit-tap-highlight-color: transparent;
     display: flex;
     flex-wrap: wrap;
     line-height: 1;
