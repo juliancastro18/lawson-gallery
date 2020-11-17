@@ -37,13 +37,13 @@
 }
 
 #content img {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     pointer-events: none;
     user-select: none;
     position: absolute;
     bottom: 0;
     width: 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 #content img.active {
