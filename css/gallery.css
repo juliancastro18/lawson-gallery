@@ -37,6 +37,7 @@
 }
 
 #content img {
+    background: red;
     pointer-events: none;
     user-select: none;
     position: absolute;
