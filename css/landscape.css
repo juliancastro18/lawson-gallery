@@ -43,6 +43,12 @@ body {
     height: calc(100vw/2000*338);
 }
 
+/* ------------- MOBILE WARNING ------------- */
+/* .device-warning {
+    display: none;
+} */
+
+
 /* ------------- DATA ------------- */
 
 #data {
@@ -66,4 +72,32 @@ body {
         grid-gap: 40px;
     }
 
+    #frame.fit {
+        border-width: 4vw;
+    }
+
+}
+
+
+@media(max-width: 640px){
+
+    /* #wrapper {
+        margin: 0;
+    }
+
+    #frame{
+        margin: 0;
+    }*/
+    #data {
+        padding: 0;
+    }
+    #frame {
+        border-width: 7vw;
+    }
+}
+
+@media(pointer:none), (pointer:coarse) {
+    .device-warning {
+        display: block;
+    }
 }

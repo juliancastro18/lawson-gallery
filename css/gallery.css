@@ -138,4 +138,10 @@
     #frame{
         margin: 0;
     }
+    #data {
+        padding: 0;
+    }
+    #frame {
+        border-width: 7vw;
+    }
 }
