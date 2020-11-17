@@ -80,6 +80,7 @@ body {
 /* ------------- NAV ------------- */
 
 nav {
+    user-select: none;
     display: flex;
     flex-wrap: wrap;
     line-height: 1;
