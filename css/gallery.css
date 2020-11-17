@@ -37,6 +37,7 @@
 }
 
 #content img {
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     pointer-events: none;
     user-select: none;
