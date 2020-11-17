@@ -68,36 +68,16 @@ body {
     }
 
     #wrapper {
-        padding: 6em 48px 0 48px;
+        padding: 6em 0 0 0;
         grid-gap: 40px;
     }
 
-    #frame.fit {
-        border-width: 4vw;
-    }
-
-}
-
-
-@media(max-width: 640px){
-
-    /* #wrapper {
-        margin: 0;
-    }
-
-    #frame{
-        margin: 0;
-    }*/
-    #data {
-        padding: 0;
-    }
     #frame {
-        border-width: 7vw;
+        border-width: 0;
     }
-}
 
-@media(pointer:none), (pointer:coarse) {
-    .device-warning {
-        display: block;
+    #data {
+        padding: 0 1em;
     }
+
 }

@@ -5,7 +5,22 @@ const btnImg = document.querySelector('#btn-img');
 
 document.onreadystatechange = hideLoading;
 body.addEventListener("mousemove", getClickCoord);
+body.addEventListener("touchstart", getTouchCoord);
+body.addEventListener("touchend", getTouchCoord);
+body.addEventListener("touchmove", getTouchCoord);
 btnImg.addEventListener("click", imgResize);
+
+function getTouchCoord(e) {
+    const evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
+    const touch = evt.touches[0] || evt.changedTouches[0];
+    const xCoord = touch.pageX;
+    parallax(xCoord);
+};
+
+function getClickCoord(e) {
+    const xCoord = e.clientX;
+    parallax(xCoord);
+}
 
 function parallax(xCoord) {
     let w = window.innerWidth / 2;
@@ -21,7 +36,6 @@ function parallax(xCoord) {
 
 function imgResize(e) {
     elem.classList.toggle('fit');
-    frame.classList.toggle('fit');
 
     if(elem.classList.contains('fit')){
         btnImg.textContent = "Crop to fit";
@@ -35,20 +49,4 @@ function hideLoading() {
     if (state == 'complete') {
             document.querySelector('.loading').style.display="none";
     }
-}
-
-body.addEventListener("touchstart", getTouchCoord);
-body.addEventListener("touchend", getTouchCoord);
-body.addEventListener("touchmove", getTouchCoord);
-
-function getTouchCoord(e) {
-    const evt = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
-    const touch = evt.touches[0] || evt.changedTouches[0];
-    const xCoord = touch.pageX;
-    parallax(xCoord);
-};
-
-function getClickCoord(e) {
-    const xCoord = e.clientX;
-    parallax(xCoord);
 }
