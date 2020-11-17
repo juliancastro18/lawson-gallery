@@ -80,4 +80,8 @@ body {
         padding: 0 1em;
     }
 
+    #content {
+        height: calc(338*100vw/770);
+    }
+
 }
