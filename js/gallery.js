@@ -63,7 +63,6 @@ const iniciarGaleria = () => {
 
 const hideLoading = () => {
     const state = document.readyState;
-    console.log(state);
     if (state == 'complete') {
             document.querySelector('.loading').style.display="none";
     }
