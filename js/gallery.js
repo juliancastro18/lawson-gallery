@@ -36,7 +36,7 @@ const changePic = e => {
     activeImg.classList.replace('active', 'inactive');
     setTimeout( ()=> {
         content.querySelector('.inactive').remove();
-    }, 800 );
+    }, 700 );
 
     // Creo la nueva img
     const newId = activeId>=imagenes.length-1 ? 0 : activeId+1;
